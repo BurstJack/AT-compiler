@@ -28,25 +28,25 @@
   <div class="tab-content">
     <div id="test1" class="tab-pane fade in active">
       <h3>Test 1</h3>
-      <textarea id="ta1" style="width:100%; height:300px;padding:5px;">input..test1</textarea>
+      <textarea id="ta1" style="width:100%; height:300px;padding:5px;">input...test1</textarea>
       <button onclick="test1();">Submit 1</button>
     </div>
 
     <div id="test2" class="tab-pane fade" style="padding: 20px;">
       <h3>Test 2</h3>
-      <textarea id="ta2"style="width:100%; height:300px;padding:5px;;">inpu..test2</textarea>
+      <textarea id="ta2"style="width:100%; height:300px;padding:5px;;">input..test2</textarea>
       <button onclick="test2();">Submit 2</button>
     </div>
   
     <div id="test3" class="tab-pane fade" style="padding: 20px;">
       <h3>Test 3</h3>
-      <textarea id="ta3"style="width:100%; height:300px;padding:5px;;">inpu..test3</textarea>
+      <textarea id="ta3"style="width:100%; height:300px;padding:5px;;">input..test3</textarea>
       <button onclick="test3();">Submit 3</button>
   </div>
   
     <div id="test4" class="tab-pane fade" style="padding: 20px;">
       <h3>Test 4</h3>
-      <textarea id="ta4" style="width:100%; height:300px;padding:5px;;">inpu..test4</textarea>
+      <textarea id="ta4" style="width:100%; height:300px;padding:5px;;">input..test4</textarea>
       <button onclick="test4();">Submit 4</button>
     </div>
   </div>
