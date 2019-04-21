@@ -58,10 +58,10 @@
   <p class="heading" style="padding: 20px;background-color: #dff0d8;">AT compiler</p>
 
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#test1">Scr-Asm</a></li>
-    <li><a data-toggle="tab" href="#test2">Mcode</a></li>
-    <li><a data-toggle="tab" href="#test3">Bcode</a></li>
-    <li><a data-toggle="tab" href="#test4">Steps</a></li>
+    <li class="active"><a data-toggle="tab" href="#test1">1.Scr-Asm</a></li>
+    <li><a data-toggle="tab" href="#test2">2.Mcode</a></li>
+    <li><a data-toggle="tab" href="#test3">3.Bcode</a></li>
+    <li><a data-toggle="tab" href="#test4">4.Steps</a></li>
   </ul>
 
   <div class="tab-content">
