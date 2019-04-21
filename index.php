@@ -66,25 +66,25 @@
 
   <div class="tab-content">
     <div id="test1" class="tab-pane fade in active" style="padding-bottom:10px;">
-      <h4>Scr-Asm</h4>
+      <h4>1.Scr-Asm</h4>
       <textarea id="ta1" style="width:100%; height:315px;padding:5px;">input...test1</textarea>
       <button onclick="test1();">Submit 1</button>
     </div>
 
     <div id="test2" class="tab-pane fade" style="padding-bottom:10px;">
-      <h4>Mcode</h4>
+      <h4>2.Mcode</h4>
       <textarea id="ta2"style="width:100%; height:315px;padding:5px;">input..test2</textarea>
       <button onclick="test2();">Submit 2</button>
     </div>
   
     <div id="test3" class="tab-pane fade" style="padding-bottom:10px;">
-      <h4>Bcode</h4>
+      <h4>3.Bcode</h4>
       <textarea id="ta3"style="width:100%; height:315px;padding:5px;">input..test3</textarea>
       <button onclick="test3();">Submit 3</button>
   </div>
   
     <div id="test4" class="tab-pane fade" style="padding-bottom:10px;">
-      <h4>Steps</h4>
+      <h4>4.Steps</h4>
       <textarea id="ta4" style="width:100%; height:315px;padding:5px;">input..test4</textarea>
       <button onclick="test4();">Submit 4</button>
     </div>
