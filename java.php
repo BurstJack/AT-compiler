@@ -316,19 +316,19 @@
   }
 
   function enable1(btn) {
-      alert(btn);
+      //alert(btn);
       if (btn == "asm") {
-          alert("processing asm.."); 
+          //alert("processing asm.."); 
           document.getElementById("compmc").classList.remove("hide");
           document.getElementById("compbc").classList.add("hide");
       }
       else if (btn == "mcode") { 
-          alert("processing mcode.."); 
+          //alert("processing mcode.."); 
           document.getElementById("compmc").classList.add("hide");
           document.getElementById("compbc").classList.remove("hide");
       }
       else if (btn == "bcode") { 
-          alert("processing bcode.."); 
+          //alert("processing bcode.."); 
           document.getElementById("compmc").classList.add("hide");
           document.getElementById("compbc").classList.add("hide");
       }
