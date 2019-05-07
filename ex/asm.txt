@@ -1,0 +1,46 @@
+^declare DeveloperWallet
+^declare AmountToReturn
+^declare LastTransaction
+^declare ValidTransaction
+^declare WalletBalance
+Init:
+#call overhead.initialize
+SET @DeveloperWallet #6e4e78e8e25f59bd
+SET @AmountToReturn #0000000077359400
+PCS
+^comment // start from here 2nd run and later
+Update:
+^comment
+^comment repeat
+^comment     Tx = next(LastTransaction)
+^comment     if (valid(Tx)) // normal(0), msg(1), valid==0
+^comment        goto(:DeveloperFund)
+^comment     LastTransaction = tstamp(Tx)
+^comment     // send at most 20 Burst to funder
+^comment     sendTo(addr(Tx), AmountToReturn)
+^comment until(false)
+^comment
+FUN A_to_Tx_after_Timestamp $LastTransaction
+FUN @ValidTransaction check_A_is_Zero
+BZR $ValidTransaction :DeveloperFund
+FUN @LastTransaction get_Timestamp_for_Tx_in_A
+FUN B_to_Address_of_Tx_in_A
+FUN send_to_Address_in_B $AmountToReturn
+JMP :Update
+DeveloperFund:
+^comment
+^comment WalletBalance = curBalance()
+^comment if (WalletBalance <= AmountToReturn)
+^comment     goto(:Finish)
+^comment // send balance to dev, keep 20 Burst
+^comment WalletBalance = (WalletBalance - AmountToReturn)
+^comment sendTo(DeveloperWallet, WalletBalance)
+^comment
+FUN @WalletBalance get_Current_Balance
+BLE $WalletBalance $AmountToReturn :Finish
+SUB @WalletBalance $AmountToReturn
+FUN set_B1 $DeveloperWallet
+FUN send_to_Address_in_B $WalletBalance
+Finish:
+NOP
+FIN
