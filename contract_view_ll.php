@@ -4,6 +4,9 @@
 <button id="compbc" type="button" class="btn btn-primary" onclick="compile_bc();">
      Compile to bc
 </button>
+<button id="evaluate" type="button" class="btn btn-primary" onclick="evaluate_bc();">
+     Evaluate bc
+</button>
 <button type="button" class="btn btn-danger hide" id="edit" onclick="enable();">
      Edit contract
 </button>

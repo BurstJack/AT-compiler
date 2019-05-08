@@ -1,4 +1,4 @@
-         <div id="steps">
+ <div id="steps">
     <button type="button" class="btn btn-primary" id="step1" onclick="step1();">
         Step1
     </button>

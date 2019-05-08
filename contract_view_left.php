@@ -16,7 +16,7 @@
         <textarea style= "min-height:420px; max-height: 420px; overflow: auto; overflow-x: scroll" class="form-control"
           placeholder="bcode here..."
 
-          id="bcode" name="bytecode">asd</textarea>
+          id="bcode" name="bytecode"></textarea>
     </div>
     <div id="desc_" class="tab-pane fade">
         <textarea style= "min-height:420px;max-height: 420px; overflow: auto; overflow-x: scroll" class="form-control"
