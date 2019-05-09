@@ -85,16 +85,19 @@
           //alert("processing asm.."); 
           document.getElementById("compmc").classList.remove("hide");
           document.getElementById("compbc").classList.add("hide");
+          document.getElementById("evaluate").classList.add("hide");
       }
       else if (btn == "mcode") { 
           //alert("processing mcode.."); 
           document.getElementById("compmc").classList.add("hide");
           document.getElementById("compbc").classList.remove("hide");
+          document.getElementById("evaluate").classList.add("hide");
       }
       else if (btn == "bcode") { 
           //alert("processing bcode.."); 
           document.getElementById("compmc").classList.add("hide");
           document.getElementById("compbc").classList.add("hide");
+          document.getElementById("evaluate").classList.remove("hide");
       }
   }
 
