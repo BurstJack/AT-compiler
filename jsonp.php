@@ -56,8 +56,11 @@
 
   function evaluate_bc() {
     tab_evaluate();
+    createScriptTag_evaluate();
+    /***
     document.getElementById("_compiler").value = 
         document.getElementById("bcode").value;
+    ***/
   }
 
 
@@ -123,6 +126,18 @@
 
       var obj = { "request":"bcode", "input": data };
       // s.src = "http://localhost/AT/jsonp_test1.php? x=" + JSON.stringify(obj);
+      s.src = server + JSON.stringify(obj);
+
+      document.body.appendChild(s);
+  }
+
+  function createScriptTag_evaluate() {
+      var s = document.createElement("script");
+      var data = document.getElementById("bcode").value;
+      data = data.replace(/#/g, "~");
+      data = data.replace(/\+/g, "§");
+
+      var obj = { "request":"evaluate", "input": data };
       s.src = server + JSON.stringify(obj);
 
       document.body.appendChild(s);
@@ -228,6 +243,17 @@
        s = s.replace(/\§/g, "+");
 
        document.getElementById("bcode").value = s;
+  }
+
+  function callback_evaluate(myObj) {
+       var s = myObj.output;
+       s = s.replace(/~/g, "#");
+       s = s.replace(/\§/g, "+");
+
+       document.getElementById("bcode").value = s;
+       document.getElementById("_compiler").value = 
+           document.getElementById("bcode").value;
+
   }
 
   function callback_step6(myObj) {
