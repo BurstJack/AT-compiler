@@ -99,6 +99,12 @@
           document.getElementById("compbc").classList.add("hide");
           document.getElementById("evaluate").classList.remove("hide");
       }
+      else if (btn == "desc") { 
+          document.getElementById("evaluate").classList.add("hide");
+      }
+      else if (btn == "usage") {
+          document.getElementById("evaluate").classList.add("hide");
+      } 
   }
 
 
